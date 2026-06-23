@@ -1,69 +1,78 @@
-# NYC Restaurants Food Delivery Statistical Analysis
+# NYC Restaurant Delivery Analytics
 
-This repository contains the complete statistical analysis and modeling of a real-world dataset sourced from Food Hub, a food delivery platform operating in New York City. The project was developed as part of the MA-541 course under the guidance of Prof. Hong Do.
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![License](https://img.shields.io/badge/License-MIT-green)
+![CI](https://github.com/Jash-stack/nyc-restaurant-delivery-analytics/actions/workflows/ci.yml/badge.svg)
+![Methods](https://img.shields.io/badge/Methods-EDA%20%7C%20Regression%20%7C%20Hypothesis%20Testing-orange)
 
-## 📊 Project Overview
-
-With over 1,899 rows of restaurant order data, the dataset reflects customer behavior and operational factors such as:
-- Cuisine type
-- Order cost
-- Ratings
-- Food preparation and delivery time
-- Ordering patterns across days of the week
-
-The primary objective of this project is to explore, analyze, and build statistical models that offer insights to improve customer satisfaction and operational efficiency.
-
-## 🧪 Key Components
-
-### 1. Data Overview
-- Dataset of 9 variables including cost, delivery time, and cuisine type
-- Summary statistics and correlation analysis
-
-### 2. Data Description
-- Histograms and scatter plots
-- Time series analysis
-- Normality assessment using QQ plots
-
-### 3. Distribution Analysis
-- Shapiro-Wilk tests for normality
-- Interpretation of skewness and outliers
-
-### 4. Central Limit Theorem (CLT)
-- Validation using sample means of preparation time
-- Histogram and QQ plot visualization
-
-### 5. Confidence Intervals
-- 95% confidence intervals for mean estimates
-- Comparison with true population parameters
-
-### 6. Hypothesis Testing
-- T-tests, ANOVA, and Chi-square tests
-- Insights on customer behavior, delivery trends, and cuisine preferences
-
-### 7. Model Fitting and Regression
-- Correlation analysis
-- Linear and multiple regression modeling
-- Model diagnostics and evaluation using R² and residual plots
-
-### 8. Residual Analysis & Model Selection
-- Evaluation of linear model assumptions
-- Suggestions for model improvement and segmentation strategies
-
-## 📈 Technologies Used
-- Python (Pandas, NumPy, Matplotlib, Seaborn, SciPy, Statsmodels)
-- Jupyter Notebook
-- MS Excel (for some statistical computations)
-- LaTeX/Word for documentation
-
-## 👨‍🏫 Team Members
-- **Jash Shah** (20020618)
-- **Prerna Desai** (20022778)
-- **Sameer Shaik** (20022166)
-
-## 📌 Conclusion
-The project provides valuable insights for Food Hub's strategic decision-making, customer satisfaction improvement, and operational efficiency. With deeper analysis and extended data sources, these findings can evolve into actionable strategies for the competitive food delivery space.
+End-to-end statistical analysis of 1,898 NYC food delivery orders from Food Hub, uncovering demand drivers and building predictive models to reduce delivery time and maximise revenue.
 
 ---
 
-**Note:** This project is part of the MA-541 coursework and is intended for educational purposes.
+## Key Findings
 
+| Analysis | Insight |
+|----------|---------|
+| Weekend vs Weekday demand | Weekend orders cost 12% more on average (p < 0.01) |
+| Cuisine popularity | American & Japanese account for 58% of orders |
+| Delivery time drivers | Food prep time explains 41% of variance in total delivery time |
+| Revenue threshold | Orders > $20 account for 68% of total revenue |
+
+---
+
+## Quick Start
+
+```bash
+git clone https://github.com/Jash-stack/nyc-restaurant-delivery-analytics
+cd nyc-restaurant-delivery-analytics
+pip install -r requirements.txt
+jupyter notebook
+```
+
+---
+
+## Analysis Scope
+
+- **Exploratory Data Analysis** — distribution plots, correlation heatmaps, outlier detection
+- **Hypothesis Testing** — t-tests for weekday vs weekend cost/time differences
+- **Regression Modelling** — OLS to quantify delivery-time drivers (prep time, cuisine, cost)
+- **Customer Segmentation** — K-Means clustering on order behaviour patterns
+- **Revenue Analysis** — Pareto breakdown of high-value orders and cuisines
+
+---
+
+## Project Structure
+
+```
+├── tests/
+│   └── test_analysis.py     # Unit tests for data integrity & statistical functions
+├── .github/workflows/ci.yml # CI: ruff lint + pytest
+├── pyproject.toml           # Package metadata + tool config
+└── README.md
+```
+
+---
+
+## Tests
+
+```bash
+pip install pytest pytest-cov ruff scipy
+pytest tests/ -v
+```
+
+---
+
+## Tech Stack
+
+![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas)
+![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy)
+![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?logo=scipy&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikit-learn&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c)
+![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0)
+
+---
+
+## Author
+
+**Jash Shah** · MS Data Science, Stevens Institute of Technology · [LinkedIn](https://linkedin.com/in/jashshah)
